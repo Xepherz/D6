@@ -94,7 +94,7 @@ function iStumble(interval, round, authorization) {
 }
 
 function color(text, color) {
-    return color ? chalk[color].bold(text) : chalk.green.bold(text);
+    return color ? chalk[color].bold(text) : chalk.yellow.bold(text);
 }
 
 function stageRequest(authorization, round) {
