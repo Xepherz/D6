@@ -50,7 +50,7 @@ const questions = [
         message: color("Interval Delay:"),
         prefix: `${color("[", "redBright")}+${color("]", "redBright")}`,
         suffix: "~",
-        default: 1000,
+        default: 500,
         validate: function (input) {
             const done = this.async();
             if (input && isNaN(input)) {
@@ -63,7 +63,7 @@ const questions = [
 ];
 
 const asciiText = figlet.textSync("XBRAYEN", {
-    font: 'Graffiti',
+    font: 'ANSI Shadow',
     horizontalLayout: 'default',
     verticalLayout: 'default',
     width: 75,
@@ -86,7 +86,7 @@ function iStumble(interval, round, authorization) {
             } else if (typeof data == "object") {
                 const date = new Date();
                 let { Id, Username, Country, Region, Crowns, SkillRating } = data.User;
-                const print = `[${color(date.getHours())}:${date.getMinutes()}] ` + [color(Id, "blueBright"), color(Username), color(Country, "blueBright"), color(Region, "blueBright"), color(Crowns, "redBright"), color(SkillRating, "yellowBright")].join(" | ");
+                const print = `${color([, "redBright)} ${color(date.getHours())}:${date.getMinutes()} ${color(], "redBright")}` + [color(Id, "blueBright"), color(Username, "redBright"), color(Country, "blueBright"), color(Region, "blueBright"), color(Crowns, "redBright"), color(SkillRating, "yellowBright")].join(" | ");
                 console.log(print);
             }
         } catch (error) {}
