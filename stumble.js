@@ -86,7 +86,7 @@ function iStumble(interval, round, authorization) {
             } else if (typeof data == "object") {
                 const date = new Date();
                 let { Id, Username, Country, Region, Crowns, SkillRating } = data.User;
-                const print = `[${color(date.getHours())}:${date.getMinutes()}] ` + [color(Id, "blueBright"), color(Username), color(Country, "white"), color(Region, "blueBright"), color(Crowns, "redBright"), color(SkillRating, "yellowBright")].join(" | ");
+                const print = `[${color(date.getHours())}:${date.getMinutes()}] ` + [color(Id, "blueBright"), color(Username), color(Country, "blueBright"), color(Region, "blueBright"), color(Crowns, "redBright"), color(SkillRating, "yellowBright")].join(" | ");
                 console.log(print);
             }
         } catch (error) {}
