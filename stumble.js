@@ -62,7 +62,7 @@ const questions = [
     }
 ];
 
-const asciiText = figlet.textSync("VIP NEW", {
+const asciiText = figlet.textSync("XBRAYEN", {
     font: 'Graffiti',
     horizontalLayout: 'default',
     verticalLayout: 'default',
@@ -86,7 +86,7 @@ function iStumble(interval, round, authorization) {
             } else if (typeof data == "object") {
                 const date = new Date();
                 let { Id, Username, Country, Region, Crowns, SkillRating } = data.User;
-                const print = `[${color(date.getHours())}:${date.getMinutes()}] ` + [color(Id, "greenBright"), color(Username), color(Country, "white"), color(Region, "greenBright"), color(Crowns, "greenBright"), color(SkillRating, "greenBright")].join(" | ");
+                const print = `[${color(date.getHours())}:${date.getMinutes()}] ` + [color(Id, "blueBright"), color(Username), color(Country, "white"), color(Region, "blueBright"), color(Crowns, "redBright"), color(SkillRating, "yellowBright")].join(" | ");
                 console.log(print);
             }
         } catch (error) {}
